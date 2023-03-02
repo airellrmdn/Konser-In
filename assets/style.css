@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400&family=Space+Mono:wght@400;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    background-color: #F5F0BB;
+}
+
+header.navbar{
+    display: flex;
+    background-color: #90C8AC;
+    padding: 2px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .nav-title {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 600;
+}
+
+header .nav-title a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+
+.nav-list li {
+    list-style-type: none;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: black;
+    padding: .5rem 1.5rem;
+    border-radius: 999px;
+    transition: all .2s ease-in-out;
+}
+
+.nav-list li:hover a {
+    background-color: #425c77;
+    color: white;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    gap: 1.5rem;
+}
+
+#content {
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #C4DFAA;
+}
+
+.featured-images {
+    width: 40%;
+    max-height: 400px;
+    margin-left: 1rem;
+}
+
+aside {
+    flex: 1;
+}
+
+.profile {
+    background-color: #73A9AD;
+    padding: 1em;
+}
+
+.profile header {
+    text-align: center;
+}
+
+.profile img {
+    width: 200px;
+}
+
+main aside article .social-media li {
+    list-style-type: none;
+}
+
+main aside article .social-media li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    transition: all .1s ease-in-out;
+}
+
+main aside article .social-media li a:hover {
+    color: #425c77;
+}
+
+main aside article .social-media ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+
+.closing {
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    font-family: 'Space Mono', monospace;
+    background-color: #90C8AC;
+    padding: 20px;
+    font-weight: bold;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #9bcc6e;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 100px;
+    font-size: 18px;
+    transition-duration: 0.4s;
+}
+
+#myBtn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+        flex-flow: column nowrap;
+    }
+
+    main aside {
+        align-self: center;
+    }
+
+    .spotify-emb {
+        height: 352px;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header.navbar {
+        flex-direction: column;
+    }
+    
+    header.navbar .nav-list ul {
+        flex-wrap: wrap;
+        column-gap: .5rem;
+    }
+
+    main aside {
+        align-self: stretch;
+    }
+
+    .featured-images {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
+    }
+
+    .spotify-emb {
+        height: 352px;
+        width: 90%;
+    }
+}
